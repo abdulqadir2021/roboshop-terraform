@@ -31,15 +31,16 @@ resource "aws_instance" "instance" {
   tags = {
     Name = "${var.component_name}-${var.env}"
   }
+}
 
-
+resource "null_resource" "ansible-pull" {
   provisioner "remote-exec" {
 
     connection {
       type     = "ssh"
       user     = "ec2-user"
       password = "DevOps321"
-      host     = self.private_ip
+      host     = aws_instance.instance.private_ip
     }
 
     inline = [
@@ -47,10 +48,7 @@ resource "aws_instance" "instance" {
       "ansible-pull -i localhost, -U https://github.com/Abdulqadirsidd/roboshop-ansible roboshop.yml -e env=${var.env} -e app_name=${var.component_name}"
     ]
   }
-
 }
-
-
 
 
 
