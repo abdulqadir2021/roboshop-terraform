@@ -28,7 +28,7 @@ resource "aws_security_group" "sg" {
 resource "aws_instance" "instance" {
   ami           = data.aws_ami.ami.id
   instance_type = var.instance_type
-  vpc_security_group_ids = ["sg-0880ecf773230947b"]
+  vpc_security_group_ids = ["aws_security_group.sg.id"]
   tags = {
     Name = "${var.compnent_name}${var.env}"
   }
