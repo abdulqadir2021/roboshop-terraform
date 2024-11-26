@@ -1,6 +1,6 @@
 variable "env" {}
-variable "component_name" {}
-variable "instance_type" {}
-variable "app_port" {}
+variable "db_instance" {}
+variable "app_instances" {}
+variable "web_instances" {}
 
 
