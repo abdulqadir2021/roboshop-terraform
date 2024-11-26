@@ -1,5 +1,5 @@
 variable "env" {}
-variable "db_instance" {}
+variable "db_instances" {}
 variable "app_instances" {}
 variable "web_instances" {}
 
