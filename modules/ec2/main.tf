@@ -35,7 +35,6 @@ resource "aws_instance" "instance" {
 
 resource "null_resource" "ansible-pull" {
   provisioner "remote-exec" {
-
     connection {
       type     = "ssh"
       user     = "ec2-user"
