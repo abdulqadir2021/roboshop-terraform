@@ -17,6 +17,9 @@ module "app_instances" {
   instance_type   = each.value["instance_type"]
 }
 
+variable "web_instances" {
+  default = ""
+}
 module "web_instances" {
   depends_on      = [module.app_instances]
   for_each        = var.web_instances
