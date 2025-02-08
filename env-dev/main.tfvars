@@ -67,6 +67,7 @@ web_instances = {
   frontend = {
     app_port      = 80
     instance_type = "t2.micro"
+    volume_size   = 20
   }
 
 }
