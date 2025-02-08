@@ -32,8 +32,9 @@ resource "aws_instance" "instance" {
     Name = "${var.component_name}-${var.env}"
   }
 }
+
   root_block_device {
-  volume_size = var.volume_size
+     volume_size = var.volume_size
   }
 
 resource "null_resource" "ansible-pull" {
