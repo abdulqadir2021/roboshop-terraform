@@ -69,5 +69,4 @@ web_instances = {
     instance_type = "t2.micro"
     volume_size   = 20
   }
-
 }
