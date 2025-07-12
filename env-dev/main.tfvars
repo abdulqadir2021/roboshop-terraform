@@ -1,6 +1,6 @@
 env            = "dev"
 domain_name    = "abdulqadir.shop"
-zone_id        = "Z00064743L2THMADA4LWZ"
+zone_id        = "Z02974211891Z1NYIJSTE"
 
 db_instances = {
   mongodb = {
