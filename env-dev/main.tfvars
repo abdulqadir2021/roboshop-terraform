@@ -1,5 +1,5 @@
 env            = "dev"
-domain_name    = "abdulqadir.shop"
+domain_name    = "yeloabhi.fun"
 zone_id        = "Z0272961EHM02ZV0QE8D"
 
 db_instances = {
