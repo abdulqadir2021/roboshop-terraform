@@ -32,9 +32,9 @@ resource "aws_instance" "instance" {
   tags = {
     Name = "${var.component_name}-${var.env}"
   }
-  root_block_device {
-    volume_size = var.volume_size
-  }
+  # root_block_device {
+  #   volume_size = var.volume_size
+  # }
 
   lifecycle {
     ignore_changes = [
