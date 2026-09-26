@@ -58,9 +58,10 @@ resource "null_resource" "ansible-pull" {
       password = data.vault_generic_secret.ssh.data["password"]
       host     = aws_instance.instance.private_ip
     }
+
   inline = [
         "sudo pip3.13 install hvac --break-system-packages 2>/dev/null || sudo pip install hvac",
-        "ansible-pull -i localhost, -U https://github.com/abdulqadir2021/roboshop-ansible roboshop.yml -e env=\({var.env} -e component=\){var.component_name} -e vault_token=${var.vault_token}"
+        "ansible-pull -i localhost, -U https://github.com/abdulqadir2021/roboshop-ansible roboshop.yml -e env=${var.env} -e component=${var.component_name} -e vault_token=${var.vault_token}"
       ]
   }
 }
